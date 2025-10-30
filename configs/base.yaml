@@ -1,0 +1,33 @@
+seed: 42
+outputs: outputs
+dataset: synthetic
+data_root: data
+image_size: 224
+num_classes: 2
+text_maxlen: 128
+batch_size: 8
+num_workers: 2
+epochs: 3
+lr: 1e-4
+weight_decay: 1e-4
+warmup_frac: 0.1
+dropout: 0.3
+ema_momentum: 0.999
+
+w_align: 1.0
+w_sd: 0.5
+
+vision:
+  backbone: 'vit_base_patch16_224'
+  pretrained: true
+  cnn_stem: true
+
+text:
+  model_name: 'emilyalsentzer/Bio_ClinicalBERT'
+  freeze_layers: 0
+
+trainer:
+  mixed_precision: true
+  grad_clip: 1.0
+  log_every: 10
+  val_every: 1000
