@@ -62,11 +62,5 @@ scripts/eval.py                # CLI evaluation entry
 scripts/infer.py               # Single-case inference
 ```
 
-## Citation
-
-If you use this code, please cite the paper section in your thesis/manuscript.
-
----
-
 ## License
 Apache-2.0
